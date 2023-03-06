@@ -19,9 +19,21 @@ const Footer = () => {
             </div>
 
             <div className={styles.socials}>
-                <a href="">
+                <a href="https://www.instagram.com/moldomamytov/">
                     <svg className='icon'>
                         <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`} />
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/atakan-moldomamytov/">
+                    <svg className='icon'>
+                        <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#linkedin`} />
+                    </svg>
+                </a>
+
+                <a href="https://github.com/AureliusAtakhanes">
+                    <svg className='icon'>
+                        <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#github`} />
                     </svg>
                 </a>
 
