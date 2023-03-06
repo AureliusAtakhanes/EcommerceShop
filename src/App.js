@@ -6,12 +6,14 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getCategories } from './features/categories/categoriesSlice';
 import Home from './components/Home/Home';
+import { getProducts } from './features/products/productsSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCategories())
+    dispatch(getCategories());
+    dispatch(getProducts())
   }, [dispatch]);
 
   return (
