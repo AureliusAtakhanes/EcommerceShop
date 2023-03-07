@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { apiSlice } from "./api/apiSlice";
 import categoriesSlice from "./categories/categoriesSlice";
 import ProductsSlice from "./products/productsSlice";
 
@@ -6,6 +7,7 @@ export const store = configureStore({
     reducer: {
         categories: categoriesSlice,
         products: ProductsSlice,
+        [apiSlice.reducerPath]: apiSlice.reducer,
     },
-    devTools: true,
+    middleware: (getMiddleware) => getMiddleware().concat(apiSlice.middleware),
 })

@@ -22,7 +22,6 @@ function App() {
 
       <div className="container">
         <Sidebar />
-        <Home />
         <AppRoutes />
       </div>
 
