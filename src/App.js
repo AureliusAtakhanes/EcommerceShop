@@ -5,8 +5,8 @@ import AppRoutes from './components/Routes/Routes';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getCategories } from './features/categories/categoriesSlice';
-import Home from './components/Home/Home';
 import { getProducts } from './features/products/productsSlice';
+import UserForm from './components/User/UserForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +19,8 @@ function App() {
   return (
     <div className="app">
       <Header />
+
+      <UserForm />
 
       <div className="container">
         <Sidebar />

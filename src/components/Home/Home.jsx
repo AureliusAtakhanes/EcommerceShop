@@ -8,11 +8,11 @@ import Products from '../Products/Products'
 
 const Home = () => {
     const dispatch = useDispatch()
-    const { products: { list, filtered }, categories } = useSelector((state) => state)
+    const { products: { list, filtered }, categories, } = useSelector((state) => state)
 
     useEffect(() => {
         if (!list.length) return;
-        dispatch(filterByPrice(100))
+        dispatch(filterByPrice(400))
     }, [dispatch, list.length])
 
     return (
@@ -21,7 +21,7 @@ const Home = () => {
             <Products products={list} amount={5} title="Trending" />
             <Categories products={categories.list} amount={5} title="Worth seeing" />
             <Banner />
-            <Products products={filtered} amount={5} title="Less than 100%" />
+            <Products products={filtered} amount={5} title="Less than 400$" />
         </>
     )
 }

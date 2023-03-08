@@ -1,10 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import styles from '../../styles/Products.module.css';
+import styles from "../../styles/Products.module.css";
 
 const Products = ({ title, style = {}, products = [], amount }) => {
     const list = products.filter((_, i) => i < amount);
+
     return (
         <section className={styles.products} style={style}>
             {title && <h2>{title}</h2>}
@@ -19,14 +20,17 @@ const Products = ({ title, style = {}, products = [], amount }) => {
 
                         <div className={styles.wrapper}>
                             <h3 className={styles.title}>{title}</h3>
-                            <div className={cat}>{cat}</div>
+                            <div className={styles.cat}>{cat}</div>
                             <div className={styles.info}>
                                 <div className={styles.prices}>
                                     <div className={styles.price}>{price}$</div>
-                                    <div className={styles.oldPrice}>{Math.floor(price * 0.8)}$</div>
+                                    <div className={styles.oldPrice}>
+                                        {Math.floor(price * 0.8)}$
+                                    </div>
                                 </div>
+
                                 <div className={styles.purchases}>
-                                    {Math.floor(Math.random() * 20 + 1)} purchase
+                                    {Math.floor(Math.random() * 20 + 1)} purchased
                                 </div>
                             </div>
                         </div>
@@ -34,7 +38,7 @@ const Products = ({ title, style = {}, products = [], amount }) => {
                 ))}
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Products
+export default Products;
